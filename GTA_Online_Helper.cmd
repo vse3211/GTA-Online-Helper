@@ -1,11 +1,15 @@
 ﻿@ECHO OFF
 chcp 65001 > NUL
 echo off
-title GTA Online helper v0.1
+title GTA Online helper v0.2
 set storagecount=1
 set storagespace=16
 set boxcount=3
 set timetobox=5
+set ncd1=0
+set ncd2=0
+set ncd3=0
+set ncd4=0
 cls
 if "%maximize%" == "yes" (goto logo) else (set maximize=yes&&title Launcher&&start /max GTA_Online_Helper.cmd&&exit)
 color 09
@@ -54,7 +58,7 @@ cls
 echo Выберите нужный вам раздел:
 echo.
 echo [0]  Exit
-echo [1]  Работа босса (SecureServ)
+echo [1]  Чистка текущей сейсии
 echo [2]  Доставка ящиков (SecureServ)
 echo [3]  Торговля транспортом (SecureServ)
 echo [4]  Мотоклубы [IN DEV]
@@ -63,7 +67,7 @@ echo [6]  Ограбления
 echo [7]  Информация о скрипте
 set /p main=Введите номер: 
 
-if %main% == 1 (goto ss-boss)
+if %main% == 1 (goto gta-clean)
 if %main% == 2 (goto ss-rus-mail)
 if %main% == 3 (goto ss-rob-car)
 if %main% == 4 (goto moto)
@@ -73,8 +77,8 @@ if %main% == 7 (goto info)
 if %main% == 0 (exit) else (mshta "about:<script>alert('Модуль не существует, либо не найден.\nПроверьте введенные вами данные: %main%');close()</script>"&&goto main)
 
 
-:ss-boss
-mshta "about:<script>alert('В разработке. Ждите обновление.');close()</script>"
+:gta-clean
+mshta "about:<script>alert('В разработке.');close()</script>"
 goto main
 
 :ss-rus-mail
@@ -151,24 +155,49 @@ set /a fullpay=((((%fullstoragespace%-1)/3)*18000)+2000)
 goto ssrms-result
 
 :ss-rob-car
-mshta "about:<script>alert('В разработке. Ждите обновление.');close()</script>"
+mshta "about:<script>alert('В разработке.');close()</script>"
 goto main
 
 :moto
-mshta "about:<script>alert('В разработке. Ждите обновление.');close()</script>"
+mshta "about:<script>alert('В разработке.');close()</script>"
 goto main
 
 :night-club
-mshta "about:<script>alert('В разработке. Ждите обновление.');close()</script>"
+cls
+echo [0]   Расчет стоимости репутации
+echo [1]   Расчет стоимости грузов
+echo [9]   Информация о разработке
+set /p main=Введите номер: 
+if %main%==0 mshta "about:<script>alert('В разработке. Ждите обновление.');close()</script>"
+if %main%==1 mshta "about:<script>alert('В разработке.');close()</script>"
+if %main%==9 mshta "about:<script>alert('Сбор данных...');close()</script>"
+goto main
+echo Ты как сюда попал? Тебе в меню ;)
 goto main
 
+:nc0
+mshta "about:<script>alert('Внимание! В данном разделе ведутся работы!\nЗа возможный ущерб во время его использования ответственность несете только вы.');close()</script>"
+set /p ncrep=Введите текущую репутацию клуба от 0 до 100: 
+set /p ncd1= Если вы уже приглашали %имя%, введите 1. Если он сейчас выбран введите 2. Иначе нажмите ENTER: 
+set /p ncd2= Если вы уже приглашали %имя%, введите 1. Если он сейчас выбран введите 2. Иначе нажмите ENTER: 
+set /p ncd3= Если вы уже приглашали %имя%, введите 1. Если он сейчас выбран введите 2. Иначе нажмите ENTER: 
+set /p ncd4= Если вы уже приглашали %имя%, введите 1. Если он сейчас выбран введите 2. Иначе нажмите ENTER: 
+if %ncd1%==0 echo Данный диджей приглашается автоматически при первой подготовке клуба!&&goto nc0
+
+
+
 :robbery
-mshta "about:<script>alert('В разработке. Ждите обновление.');close()</script>"
+mshta "about:<script>alert('В разработке.');close()</script>"
 goto main
 
 :info
 cls
 echo [Информация о скрипте]
+echo Версия: 0.2
+echo Изменения:
+echo - Раздел "Работа босса" удален из Разработки
+echo + Добавлен раздел "Чистка текущей сейсии", но временно не доступен для использования
+echo + Начата работа над "Ночными клубами". Добавлено меню.
 echo.
 echo Разработчик: LondonistTV
 echo.
