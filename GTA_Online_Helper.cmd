@@ -1,7 +1,7 @@
 ﻿@ECHO OFF
 chcp 65001 > NUL
 echo off
-title GTA Online helper v0.2
+title GTA Online helper v0.2.1
 set storagecount=1
 set storagespace=16
 set boxcount=3
@@ -11,9 +11,9 @@ set ncd2=0
 set ncd3=0
 set ncd4=0
 cls
-if "%maximize%" == "yes" (goto logo) else (set maximize=yes&&title Launcher&&start /max GTA_Online_Helper.cmd&&exit)
-color 09
+if "%1" == "yes" (goto logo) else (start /max GTA_Online_Helper.cmd yes&&exit)
 :logo
+color 09
 echo.                                                                                                                                           
 echo.                                                                                                                                           
 echo.                                                                                                                                           
@@ -126,7 +126,8 @@ echo Количество ходок: [IN DEV] >> GTAHelperResult%date%.txt
 echo Затраты по времени: %fulltime% минут >> GTAHelperResult%date%.txt
 echo Всего ящиков: %fullstoragespace% >> GTAHelperResult%date%.txt
 echo Материальные затраты: %fullpay%$ >> GTAHelperResult%date%.txt
-pause
+echo Данные сохранены. Нажмите ENTER для продолжения...
+pause>NUL
 goto main
 
 :ss-rus-mail-medium
@@ -193,17 +194,15 @@ goto main
 :info
 cls
 echo [Информация о скрипте]
-echo Версия: 0.2
+echo Версия: 0.2.1
 echo Изменения:
-echo - Раздел "Работа босса" удален из Разработки
-echo + Добавлен раздел "Чистка текущей сейсии", но временно не доступен для использования
-echo + Начата работа над "Ночными клубами". Добавлено меню.
+echo * Фиск мелких ошибок и оптимизация лаунчера
 echo.
 echo Разработчик: LondonistTV
 echo.
 echo Скрипты написаны: LondonistTV
 echo.
-echo Разделы 'Работа босса' и 'Доставка ящиков':
+echo Раздел 'Доставка ящиков':
 echo LondonistTV и клан RUNE
 echo.
 echo Раздел 'Торговля транспортом':
@@ -213,10 +212,12 @@ echo Раздел 'Мотоклубы':
 echo [В разработке]
 echo.
 echo Раздел 'Ночные клубы':
-echo [В разработке]
+echo [Разработка: 25%]
 echo.
 echo Раздел 'Ограбления':
 echo [В разработке]
-pause
+echo.
+echo Нажмите ENTER для продолжения...
+pause>NUL
 goto main
 
