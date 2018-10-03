@@ -1,7 +1,7 @@
 ﻿@ECHO OFF
 chcp 65001 > NUL
 echo off
-title GTA Online helper v0.2.1
+title GTA Online helper v0.2.2
 set storagecount=1
 set storagespace=16
 set boxcount=3
@@ -58,7 +58,7 @@ cls
 echo Выберите нужный вам раздел:
 echo.
 echo [0]  Exit
-echo [1]  Чистка текущей сейсии
+echo [1]  Чистка сейсии
 echo [2]  Доставка ящиков (SecureServ)
 echo [3]  Торговля транспортом (SecureServ)
 echo [4]  Мотоклубы [IN DEV]
@@ -78,7 +78,13 @@ if %main% == 0 (exit) else (mshta "about:<script>alert('Модуль не сущ
 
 
 :gta-clean
-mshta "about:<script>alert('В разработке.');close()</script>"
+if NOT EXIST ps.exe (echo Файл ps.exe необходим для работы данного модуля!&&echo Загрузите файл в папку со скриптом или заново&&echo распакуйте архив со скриптом в текущую папку&&echo Как только файл будет на месте - нажмите ENTER&&timeout /t 30 /nobreak&&pause) else (ps -s GTA5)
+echo Чистка сейсии... Ждите...
+timeout /t 30 /nobreak >NUL
+ps -r GTA5
+cls
+echo Сейсия отчищена. Можно играть.
+timeout /t 3 /nobreak >NUL
 goto main
 
 :ss-rus-mail
@@ -194,13 +200,18 @@ goto main
 :info
 cls
 echo [Информация о скрипте]
-echo Версия: 0.2.1
+echo Версия: 0.2.2
 echo Изменения:
-echo * Фиск мелких ошибок и оптимизация лаунчера
+echo + Закончена разработка раздела 'Чистка сейсии'
+echo * Начата работа над переходом на новый движок...
 echo.
 echo Разработчик: LondonistTV
 echo.
 echo Скрипты написаны: LondonistTV
+echo.
+echo Раздел 'Чистка сейсии':
+echo Sarath (основная часть) https://github.com/SarathR
+echo LondonistTV (Batch script)
 echo.
 echo Раздел 'Доставка ящиков':
 echo LondonistTV и клан RUNE
@@ -217,6 +228,8 @@ echo.
 echo Раздел 'Ограбления':
 echo [В разработке]
 echo.
+echo Новый движок:
+echo 5% [=-------------------] C#
 echo Нажмите ENTER для продолжения...
 pause>NUL
 goto main
