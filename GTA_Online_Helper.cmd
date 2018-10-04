@@ -1,15 +1,12 @@
 ﻿@ECHO OFF
 chcp 65001 > NUL
 echo off
-title GTA Online helper v0.2.2
+title GTA Online helper v0.2.3
 set storagecount=1
 set storagespace=16
 set boxcount=3
 set timetobox=5
-set ncd1=0
-set ncd2=0
-set ncd3=0
-set ncd4=0
+set ncrep=0
 cls
 if "%1" == "yes" (goto logo) else (start /max GTA_Online_Helper.cmd yes&&exit)
 :logo
@@ -51,7 +48,6 @@ echo.
 
 
 
-
 mshta "about:<script>alert('Инструкция по эксплуатации:\n В главном меню необходимо выбрать нужный вам пункт и нажать ENTER.\n В некоторых разделах есть предустановленная информация типа: 16.\n Если ее значение вас устраивает, то ничего не вводите и нажмите ENTER.');close()</script>"
 :main
 cls
@@ -79,8 +75,8 @@ if %main% == 0 (exit) else (mshta "about:<script>alert('Модуль не сущ
 
 :gta-clean
 if NOT EXIST ps.exe (echo Файл ps.exe необходим для работы данного модуля!&&echo Загрузите файл в папку со скриптом или заново&&echo распакуйте архив со скриптом в текущую папку&&echo Как только файл будет на месте - нажмите ENTER&&timeout /t 30 /nobreak&&pause) else (ps -s GTA5)
-echo Чистка сейсии... Ждите...
-timeout /t 30 /nobreak >NUL
+echo Чистка сейсии... Не закрывайте окно до окончания процесса!
+timeout /t 15 /nobreak >NUL
 ps -r GTA5
 cls
 echo Сейсия отчищена. Можно играть.
@@ -184,12 +180,58 @@ goto main
 
 :nc0
 mshta "about:<script>alert('Внимание! В данном разделе ведутся работы!\nЗа возможный ущерб во время его использования ответственность несете только вы.');close()</script>"
+:ncip
+if %ncip% == 1 goto ncf
+if %ncrep% == 0 goto nci0
+if %ncrep% LEQ 5 goto nci5
+if %ncrep% LEQ 10 goto nci5
+if %ncrep% LEQ 15 goto nci5
+if %ncrep% LEQ 20 goto nci5
+if %ncrep% LEQ 25 goto nci5
+if %ncrep% LEQ 30 goto nci5
+if %ncrep% LEQ 35 goto nci5
+if %ncrep% LEQ 40 goto nci5
+if %ncrep% LEQ 45 goto nci5
+if %ncrep% LEQ 50 goto nci5
+if %ncrep% LEQ 55 goto nci5
+if %ncrep% LEQ 60 goto nci5
+if %ncrep% LEQ 65 goto nci5
+if %ncrep% LEQ 70 goto nci5
+if %ncrep% LEQ 75 goto nci5
+if %ncrep% LEQ 80 goto nci5
+if %ncrep% LEQ 85 goto nci5
+if %ncrep% LEQ 90 goto nci5
+if %ncrep% LEQ 95 goto nci5
+if %ncrep% LEQ 100 goto nci5
+:nci
 set /p ncrep=Введите текущую репутацию клуба от 0 до 100: 
-set /p ncd1= Если вы уже приглашали %имя%, введите 1. Если он сейчас выбран введите 2. Иначе нажмите ENTER: 
-set /p ncd2= Если вы уже приглашали %имя%, введите 1. Если он сейчас выбран введите 2. Иначе нажмите ENTER: 
-set /p ncd3= Если вы уже приглашали %имя%, введите 1. Если он сейчас выбран введите 2. Иначе нажмите ENTER: 
-set /p ncd4= Если вы уже приглашали %имя%, введите 1. Если он сейчас выбран введите 2. Иначе нажмите ENTER: 
-if %ncd1%==0 echo Данный диджей приглашается автоматически при первой подготовке клуба!&&goto nc0
+set ncip=1
+cls
+:ncf
+if %ncip%==1 goto ncf2 else goto ncip
+:ncf2
+set ncf=1
+if %ncrepch%==1 goto ncrepbuy
+if %ncrepch%==2 goto ncrepjob
+echo Выберите способ поднятия репутации:
+echo [1]   Покупка репутации
+echo [2]   Получение репутации
+set /p ncrepch=Введите номер: 
+if %ncrepch%==1 goto ncrepbuy
+if %ncrepch%==2 goto ncrepjob
+
+
+
+:ncrepbuy
+if %ncf%==0 goto ncf
+set /p ncdn=Если есть иджеи за 100к [1]. Если остались только за 10к [0]: 
+
+
+
+:ncrepjob
+if %ncf%==0 goto ncf
+
+
 
 
 
@@ -200,10 +242,10 @@ goto main
 :info
 cls
 echo [Информация о скрипте]
-echo Версия: 0.2.2
+echo Версия: 0.2.3
 echo Изменения:
-echo + Закончена разработка раздела 'Чистка сейсии'
-echo * Начата работа над переходом на новый движок...
+echo * Уменьшено время ожидания в генераторе сейсии до 15 секунд
+echo * Почти готов один из модулей
 echo.
 echo Разработчик: LondonistTV
 echo.
@@ -223,7 +265,7 @@ echo Раздел 'Мотоклубы':
 echo [В разработке]
 echo.
 echo Раздел 'Ночные клубы':
-echo [Разработка: 25%]
+echo [Разработка: 40%]
 echo.
 echo Раздел 'Ограбления':
 echo [В разработке]
@@ -234,3 +276,71 @@ echo Нажмите ENTER для продолжения...
 pause>NUL
 goto main
 
+
+
+
+rem Interface generator for GOH v0.1
+:nci0
+echo Репутация клуба: [    ^|    ^|    ^|    ^|    ] %ncrep%^%
+goto nci
+:nci5
+echo Репутация клуба: [=   ^|    ^|    ^|    ^|    ] %ncrep%^%
+goto nci
+:nci10
+echo Репутация клуба: [==  ^|    ^|    ^|    ^|    ] %ncrep%^%
+goto nci
+:nci15
+echo Репутация клуба: [=== ^|    ^|    ^|    ^|    ] %ncrep%^%
+goto nci
+:nci20
+echo Репутация клуба: [====^|    ^|    ^|    ^|    ] %ncrep%^%
+goto nci
+:nci25
+echo Репутация клуба: [====^|=   ^|    ^|    ^|    ] %ncrep%^%
+goto nci
+:nci30
+echo Репутация клуба: [====^|==  ^|    ^|    ^|    ] %ncrep%^%
+goto nci
+:nci35
+echo Репутация клуба: [====^|=== ^|    ^|    ^|    ] %ncrep%^%
+goto nci
+:nci40
+echo Репутация клуба: [====^|====^|    ^|    ^|    ] %ncrep%^%
+goto nci
+:nci45
+echo Репутация клуба: [====^|====^|=   ^|    ^|    ] %ncrep%^%
+goto nci
+:nci50
+echo Репутация клуба: [====^|====^|==  ^|    ^|    ] %ncrep%^%
+goto nci
+:nci55
+echo Репутация клуба: [====^|====^|=== ^|    ^|    ] %ncrep%^%
+goto nci
+:nci60
+echo Репутация клуба: [====^|====^|====^|    ^|    ] %ncrep%^%
+goto nci
+:nci65
+echo Репутация клуба: [====^|====^|====^|=   ^|    ] %ncrep%^%
+goto nci
+:nci70
+echo Репутация клуба: [====^|====^|====^|==  ^|    ] %ncrep%^%
+goto nci
+:nci75
+echo Репутация клуба: [====^|====^|====^|=== ^|    ] %ncrep%^%
+goto nci
+:nci80
+echo Репутация клуба: [====^|====^|====^|====^|    ] %ncrep%^%
+goto nci
+:nci85
+echo Репутация клуба: [====^|====^|====^|====^|=   ] %ncrep%^%
+goto nci
+:nci90
+echo Репутация клуба: [====^|====^|====^|====^|==  ] %ncrep%^%
+goto nci
+:nci95
+echo Репутация клуба: [====^|====^|====^|====^|=== ] %ncrep%^%
+goto nci
+:nci100
+echo Репутация клуба: [====^|====^|====^|====^|====] %ncrep%^%
+goto nci
+rem end
