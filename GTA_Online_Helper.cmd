@@ -1,13 +1,22 @@
-﻿@ECHO OFF
+﻿
 chcp 65001 > NUL
 echo off
-title GTA Online helper v0.2.3
+cls
+title GTA Online helper v0.2.4
 set storagecount=1
 set storagespace=16
 set boxcount=3
 set timetobox=5
 set ncrep=0
-cls
+if "%1"=="1" goto gta-clean
+if "%1"=="2" echo API in dev
+if "%1"=="3" echo API in dev
+if "%1"=="4" echo API in dev
+if "%1"=="5" echo API in dev
+if "%1"=="6" echo API in dev
+if "%1"=="8" goto api
+if "%1"=="/?" goto api
+if "%1"=="?" goto api
 if "%1" == "yes" (goto logo) else (start /max GTA_Online_Helper.cmd yes&&exit)
 :logo
 color 09
@@ -61,6 +70,7 @@ echo [4]  Мотоклубы [IN DEV]
 echo [5]  Ночные клубы [IN DEV]
 echo [6]  Ограбления
 echo [7]  Информация о скрипте
+echo [8]  API info ^| NEW ^|
 set /p main=Введите номер: 
 
 if %main% == 1 (goto gta-clean)
@@ -70,6 +80,7 @@ if %main% == 4 (goto moto)
 if %main% == 5 (goto night-club)
 if %main% == 6 (goto robbery)
 if %main% == 7 (goto info)
+if %main% == 8 (goto api)
 if %main% == 0 (exit) else (mshta "about:<script>alert('Модуль не существует, либо не найден.\nПроверьте введенные вами данные: %main%');close()</script>"&&goto main)
 
 
@@ -79,8 +90,8 @@ echo Чистка сейсии... Не закрывайте окно до око
 timeout /t 15 /nobreak >NUL
 ps -r GTA5
 cls
-echo Сейсия отчищена. Можно играть.
-timeout /t 3 /nobreak >NUL
+mshta "about:<script>alert('Сейсия отчищена, можно играть');close()</script>"
+if "%1"=="1" goto:EOF
 goto main
 
 :ss-rus-mail
@@ -182,27 +193,28 @@ goto main
 mshta "about:<script>alert('Внимание! В данном разделе ведутся работы!\nЗа возможный ущерб во время его использования ответственность несете только вы.');close()</script>"
 :ncip
 if %ncip% == 1 goto ncf
+if %ncip% == 0 goto nci
 if %ncrep% == 0 goto nci0
 if %ncrep% LEQ 5 goto nci5
-if %ncrep% LEQ 10 goto nci5
-if %ncrep% LEQ 15 goto nci5
-if %ncrep% LEQ 20 goto nci5
-if %ncrep% LEQ 25 goto nci5
-if %ncrep% LEQ 30 goto nci5
-if %ncrep% LEQ 35 goto nci5
-if %ncrep% LEQ 40 goto nci5
-if %ncrep% LEQ 45 goto nci5
-if %ncrep% LEQ 50 goto nci5
-if %ncrep% LEQ 55 goto nci5
-if %ncrep% LEQ 60 goto nci5
-if %ncrep% LEQ 65 goto nci5
-if %ncrep% LEQ 70 goto nci5
-if %ncrep% LEQ 75 goto nci5
-if %ncrep% LEQ 80 goto nci5
-if %ncrep% LEQ 85 goto nci5
-if %ncrep% LEQ 90 goto nci5
-if %ncrep% LEQ 95 goto nci5
-if %ncrep% LEQ 100 goto nci5
+if %ncrep% LEQ 10 goto nci10
+if %ncrep% LEQ 15 goto nci15
+if %ncrep% LEQ 20 goto nci20
+if %ncrep% LEQ 25 goto nci25
+if %ncrep% LEQ 30 goto nci30
+if %ncrep% LEQ 35 goto nci35
+if %ncrep% LEQ 40 goto nci40
+if %ncrep% LEQ 45 goto nci45
+if %ncrep% LEQ 50 goto nci50
+if %ncrep% LEQ 55 goto nci55
+if %ncrep% LEQ 60 goto nci60
+if %ncrep% LEQ 65 goto nci65
+if %ncrep% LEQ 70 goto nci70
+if %ncrep% LEQ 75 goto nci75
+if %ncrep% LEQ 80 goto nci80
+if %ncrep% LEQ 85 goto nci85
+if %ncrep% LEQ 90 goto nci90
+if %ncrep% LEQ 95 goto nci95
+if %ncrep% LEQ 100 goto nci100
 :nci
 set /p ncrep=Введите текущую репутацию клуба от 0 до 100: 
 set ncip=1
@@ -242,10 +254,11 @@ goto main
 :info
 cls
 echo [Информация о скрипте]
-echo Версия: 0.2.3
+echo Версия: 0.2.4
 echo Изменения:
-echo * Уменьшено время ожидания в генераторе сейсии до 15 секунд
-echo * Почти готов один из модулей
+echo + Добавлено API для упрощенной интеграции скрипта.
+echo * Раздел [1] подкючен к API
+echo * Раздел [8] подключен к API
 echo.
 echo Разработчик: LondonistTV
 echo.
@@ -276,7 +289,12 @@ echo Нажмите ENTER для продолжения...
 pause>NUL
 goto main
 
-
+:api
+mshta "about:<script>alert('Инструкция по работе с GOH API:\n Создать ярлык на файл (file_dir/GTA_Online_Hepler.cmd 1), для запуска с параметрами.\n В параметры ввести номер запускаемого модуля.');close()</script>"
+if "%1"=="8" goto:EOF
+if "%1"=="/?" goto:EOF
+if "%1"=="?" goto:EOF
+goto main
 
 
 rem Interface generator for GOH v0.1
