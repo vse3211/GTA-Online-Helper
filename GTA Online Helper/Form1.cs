@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Diagnostics;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GTA_Online_Helper
@@ -29,7 +21,10 @@ namespace GTA_Online_Helper
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Form1.ActiveForm.Hide();
+            Form3 MyForm3 = new Form3();
+            MyForm3.ShowDialog();
+            Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -61,12 +56,22 @@ namespace GTA_Online_Helper
                 MessageBoxIcon.Information,
                 MessageBoxDefaultButton.Button1,
                 MessageBoxOptions.DefaultDesktopOnly);
-            Show();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("http://londev.ru");
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            //empty
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://vk.com/londonist");
+        }
+
     }
 }

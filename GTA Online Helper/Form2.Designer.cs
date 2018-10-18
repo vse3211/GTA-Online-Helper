@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
@@ -35,6 +36,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(0, 64);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(26, 24);
@@ -45,6 +47,7 @@
             // 
             // progressBar1
             // 
+            this.progressBar1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.progressBar1.Location = new System.Drawing.Point(9, 20);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(449, 26);
@@ -54,7 +57,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(198, 49);
+            this.label1.Cursor = System.Windows.Forms.Cursors.No;
+            this.label1.Location = new System.Drawing.Point(189, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 2;
@@ -70,8 +74,11 @@
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form2";
-            this.Text = "GTA Online Helper [Создание сейсии]";
+            this.Text = "GOH [Создание сейсии]";
             this.ResumeLayout(false);
             this.PerformLayout();
 

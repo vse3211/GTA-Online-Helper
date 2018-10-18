@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GTA_Online_Helper
@@ -21,6 +13,8 @@ namespace GTA_Online_Helper
 
         private void button1_Click(object sender, EventArgs e)
         {
+            label1.Text = "^ Убить сейсию ^";
+            ActiveForm.Text = "GOH [Создание сейсии]";
             Form2.ActiveForm.Hide();
             Form1 MyForm1 = new Form1();
             MyForm1.ShowDialog();
@@ -60,11 +54,12 @@ namespace GTA_Online_Helper
             progressBar1.Value = 100;
 
             p.StartInfo.FileName = Application.StartupPath + @"\ps.exe";
-            p.StartInfo.Arguments = "-r GTA5";
+            p.StartInfo.Arguments = "-r notepad";
             p.Start();
 
             button1.Visible = true;
             label1.Text = "Можно играть";
+            ActiveForm.Text = "GOH [Создадим еще одну сейсию?]";
         }
     }
 }
