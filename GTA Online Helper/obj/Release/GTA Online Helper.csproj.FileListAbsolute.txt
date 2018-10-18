@@ -1,0 +1,11 @@
+C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\bin\Release\GTA Online Helper.exe.config
+C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\bin\Release\GTA Online Helper.exe
+C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\bin\Release\GTA Online Helper.pdb
+C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\obj\Release\GTA Online Helper.csprojAssemblyReference.cache
+C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\obj\Release\GTA_Online_Helper.Form1.resources
+C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\obj\Release\GTA_Online_Helper.Form2.resources
+C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\obj\Release\GTA_Online_Helper.Properties.Resources.resources
+C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\obj\Release\GTA Online Helper.csproj.GenerateResource.cache
+C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\obj\Release\GTA Online Helper.csproj.CoreCompileInputs.cache
+C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\obj\Release\GTA Online Helper.exe
+C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\obj\Release\GTA Online Helper.pdb
