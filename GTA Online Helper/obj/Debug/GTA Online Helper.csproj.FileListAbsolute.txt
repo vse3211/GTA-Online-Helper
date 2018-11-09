@@ -10,3 +10,15 @@ C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\obj\Debug\GTA 
 C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\obj\Debug\GTA Online Helper.pdb
 C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\obj\Debug\GTA_Online_Helper.Form2.resources
 C:\Users\Omaroff\source\repos\GTA Online Helper\GTA Online Helper\obj\Debug\GTA_Online_Helper.Form3.resources
+C:\Users\Londonist\Documents\GitHub\GTA-Online-Helper\GTA Online Helper\bin\Debug\GTA Online Helper.exe.config
+C:\Users\Londonist\Documents\GitHub\GTA-Online-Helper\GTA Online Helper\bin\Debug\GTA Online Helper.exe
+C:\Users\Londonist\Documents\GitHub\GTA-Online-Helper\GTA Online Helper\bin\Debug\GTA Online Helper.pdb
+C:\Users\Londonist\Documents\GitHub\GTA-Online-Helper\GTA Online Helper\obj\Debug\GTA Online Helper.csprojAssemblyReference.cache
+C:\Users\Londonist\Documents\GitHub\GTA-Online-Helper\GTA Online Helper\obj\Debug\GTA_Online_Helper.Form1.resources
+C:\Users\Londonist\Documents\GitHub\GTA-Online-Helper\GTA Online Helper\obj\Debug\GTA_Online_Helper.Form2.resources
+C:\Users\Londonist\Documents\GitHub\GTA-Online-Helper\GTA Online Helper\obj\Debug\GTA_Online_Helper.Form3.resources
+C:\Users\Londonist\Documents\GitHub\GTA-Online-Helper\GTA Online Helper\obj\Debug\GTA_Online_Helper.Properties.Resources.resources
+C:\Users\Londonist\Documents\GitHub\GTA-Online-Helper\GTA Online Helper\obj\Debug\GTA Online Helper.csproj.GenerateResource.cache
+C:\Users\Londonist\Documents\GitHub\GTA-Online-Helper\GTA Online Helper\obj\Debug\GTA Online Helper.csproj.CoreCompileInputs.cache
+C:\Users\Londonist\Documents\GitHub\GTA-Online-Helper\GTA Online Helper\obj\Debug\GTA Online Helper.exe
+C:\Users\Londonist\Documents\GitHub\GTA-Online-Helper\GTA Online Helper\obj\Debug\GTA Online Helper.pdb
