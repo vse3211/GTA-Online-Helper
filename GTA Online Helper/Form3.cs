@@ -15,6 +15,8 @@ namespace GTA_Online_Helper
         public Form3()
         {
             InitializeComponent();
+            radioButton1.Checked = true;
+            radioButton2.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,7 +51,7 @@ namespace GTA_Online_Helper
                 int oneBoxCount;
                 int twoBoxCount;
                 int thirdBoxCount;
-                int totalBoxCount;
+                int totalBoxCount = 0;
                 int storageCount;
                 int boxCount;
                 int runs;
@@ -145,19 +147,19 @@ namespace GTA_Online_Helper
                 	{
                 		int box11 = 159500;
                 		int box = box11;
-                		?.Text = "Приблизительно";
+                		radioButton1.Text = "Приблизительно";
                 	}
                 	else if (totalBoxCount == 12)
                 	{
                 		int box12 = 174000;
                 		int box = box12;
-                		?.Text = "Приблизительно";
+                		radioButton1.Text = "Приблизительно";
                 	}
                 	else if (totalBoxCount == 13)
                 	{
                 		int box13 = 188500;
-                		int box = box13;
-                		?.Text = "Приблизительно";
+                        int box = box13;
+                		radioButton1.Text = "Приблизительно";
                 	}
                 	else if (totalBoxCount == 14)
                 	{
