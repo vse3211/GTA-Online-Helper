@@ -97,6 +97,167 @@ namespace GTA_Online_Helper
                 int box100 = 1950000;
                 int box110 = 2145000;
                 int box111 = 2222000;
+
+                if (totalBoxCount == 1)
+                {
+                	int box = box1;
+                }
+                else if (totalBoxCount == 2)
+                {
+                	int box = box2;
+                }
+                else if (totalBoxCount == 3)
+                {
+                	int box = box3;
+                }
+                else if (totalBoxCount == 4)
+                {
+                	int box = box4;
+                }
+                else if (totalBoxCount == 5)
+                {
+                	int box = box5;
+                }
+                else if (totalBoxCount == 6)
+                {
+                	int box = box6;
+                }
+                else if (totalBoxCount == 7)
+                {
+                	int box = box7;
+                }
+                else if (totalBoxCount == 8)
+                {
+                	int box = box8;
+                }
+                else if (totalBoxCount == 9)
+                {
+                	int box = box9;
+                }
+                else if (totalBoxCount >= 10 && totalBoxCount <= 14)
+                {
+					//code
+                	if (totalBoxCount == 10)
+                	{
+                	int box = box10;
+                	}
+                	else if (totalBoxCount == 11)
+                	{
+                		int box11 = 159500;
+                		int box = box11;
+                		?.Text = "Приблизительно";
+                	}
+                	else if (totalBoxCount == 12)
+                	{
+                		int box12 = 174000;
+                		int box = box12;
+                		?.Text = "Приблизительно";
+                	}
+                	else if (totalBoxCount == 13)
+                	{
+                		int box13 = 188500;
+                		int box = box13;
+                		?.Text = "Приблизительно";
+                	}
+                	else if (totalBoxCount == 14)
+                	{
+                		int box = box14;
+                	}
+                	//end code
+
+				}
+                else if (totalBoxCount == 15)
+                {
+                	int box = box15;
+                }
+                else if (totalBoxCount >= 16 && totalBoxCount <= 19)
+                {
+					//code
+
+					//end code
+				}
+                else if (totalBoxCount >= 20 && totalBoxCount <= 24)
+                {
+					//code
+
+					//end code
+				}
+                else if (totalBoxCount >= 25 && totalBoxCount <= 29)
+                {
+					//code
+
+					//end code
+				}
+                else if (totalBoxCount >= 30 && totalBoxCount <= 34)
+                {
+					//code
+
+					//end code
+				}
+				else if (totalBoxCount >= 35 && totalBoxCount <= 39)
+				{
+					//code
+
+					//end code
+				}
+				else if (totalBoxCount >= 40 && totalBoxCount <= 42)
+				{
+					//code
+
+					//end code
+				}
+				else if (totalBoxCount == 44)
+				{
+                	int box = box44;
+                }
+				else if (totalBoxCount >= 45 && totalBoxCount <= 49)
+				{
+					//code
+
+					//end code
+				}
+				else if (totalBoxCount >= 50 && totalBoxCount <= 59)
+				{
+					//code
+
+					//end code
+				}
+				else if (totalBoxCount >= 60 && totalBoxCount <= 69)
+				{
+					//code
+
+					//end code
+				}
+				else if (totalBoxCount >= 70 && totalBoxCount <= 79)
+				{
+					//code
+
+					//end code
+				}
+				else if (totalBoxCount >= 80 && totalBoxCount <= 89)
+				{
+					//code
+
+					//end code
+				}
+				else if (totalBoxCount >= 90 && totalBoxCount <= 99)
+				{
+					//code
+
+					//end code
+				}
+				else if (totalBoxCount == 100)
+				{
+                	int box = box100;
+                }
+				else if (totalBoxCount == 110)
+				{
+                	int box = box110;
+                }
+				else if (totalBoxCount == 111)
+				{
+                	int box = box111;
+                }
                 
                 small = 16;
                 medium = 42;
