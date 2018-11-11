@@ -1002,11 +1002,11 @@ namespace GTA_Online_Helper
 					radioButton2.Enabled = false;
                 }
 
-                if (storageCount > 1)
+                if (totalBoxCount > 110)
                 {
                 	income = box * storageCount;
                 }
-                else if (storageCount > 1)
+                else if (totalBoxCount <= 110)
                 {
                     income = box;
                 }
