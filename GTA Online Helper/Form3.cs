@@ -143,11 +143,11 @@ namespace GTA_Online_Helper
                     MessageBoxOptions.DefaultDesktopOnly);
                 }
 
-                if (storageCount > 1)
+                if (totalBoxCount > 110)
                 {
                 	boxOnCargo = totalBoxCount / storageCount;
                 }
-                else if (storageCount == 1)
+                else if (totalBoxCount <= 110)
                 {
                 	boxOnCargo = totalBoxCount;
                 }
