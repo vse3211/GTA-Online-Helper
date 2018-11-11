@@ -267,18 +267,18 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(3, 26);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 13);
+            this.label18.Size = new System.Drawing.Size(16, 13);
             this.label18.TabIndex = 24;
-            this.label18.Text = "label18";
+            this.label18.Text = "---";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(3, 13);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(41, 13);
+            this.label17.Size = new System.Drawing.Size(16, 13);
             this.label17.TabIndex = 24;
-            this.label17.Text = "label17";
+            this.label17.Text = "---";
             // 
             // label16
             // 
