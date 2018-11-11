@@ -253,7 +253,7 @@ namespace GTA_Online_Helper
                 	else if (totalBoxCount == 18)
                 	{
                 		int box18 = 270000;
-                		int box = box15;
+                		int box = box18;
                 		radioButton2.Enabled = true;
                 		radioButton2.Checked = true;
 						radioButton1.Enabled = false;
