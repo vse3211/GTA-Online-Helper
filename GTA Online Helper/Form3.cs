@@ -57,9 +57,9 @@ namespace GTA_Online_Helper
                 int boxCount;
                 int runs;
                 int overbox;
-                int income;
-                int clearIncome;
-                int boxOnCargo;
+                int income = 0;
+                int clearIncome = 0;
+                int boxOnCargo = 0;
 
                 int box1 = 10000;
                 int box2 = 22000;
@@ -155,7 +155,7 @@ namespace GTA_Online_Helper
                 if (boxOnCargo > 110)
                 {
                 	MessageBox.Show(
-					boxOnCargo.ToString()
+					boxOnCargo.ToString(),
 					"boxOnCargo Debug",
 					MessageBoxButtons.OK,
 					MessageBoxIcon.Warning,
@@ -1007,11 +1007,11 @@ namespace GTA_Online_Helper
                 }
                 else if (storageCount > 1)
                 {
-                	income = box
+                    income = box;
                 }
 
                 // Расчет прибыли
-                clearIncome = income - totalBoxPrice
+                clearIncome = income - totalBoxPrice;
 
                 // Вывод на экран
                 label14.Text = storageCount.ToString() + "/" + boxCount.ToString();
