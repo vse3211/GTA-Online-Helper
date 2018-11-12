@@ -33,24 +33,9 @@ namespace GTA_Online_Helper
 
             progressBar1.Value = 0;
             System.Threading.Thread.Sleep(1500);
-            progressBar1.Value = 10;
-            System.Threading.Thread.Sleep(1500);
-            progressBar1.Value = 20;
-            System.Threading.Thread.Sleep(1500);
-            progressBar1.Value = 30;
-            System.Threading.Thread.Sleep(1500);
-            progressBar1.Value = 40;
-            System.Threading.Thread.Sleep(1500);
+            System.Threading.Thread.Sleep(6000);
             progressBar1.Value = 50;
-            System.Threading.Thread.Sleep(1500);
-            progressBar1.Value = 60;
-            System.Threading.Thread.Sleep(1500);
-            progressBar1.Value = 70;
-            System.Threading.Thread.Sleep(1500);
-            progressBar1.Value = 80;
-            System.Threading.Thread.Sleep(1500);
-            progressBar1.Value = 90;
-            System.Threading.Thread.Sleep(1500);
+            System.Threading.Thread.Sleep(7500);
             progressBar1.Value = 100;
 
             p.StartInfo.FileName = Application.StartupPath + @"\ps.exe";
