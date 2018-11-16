@@ -31,13 +31,13 @@ namespace GTA_Online_Helper
             p.StartInfo.Arguments = "-s GTA5";
             p.Start();
 
-            progressBar1.Value = 0;
-            System.Threading.Thread.Sleep(1500);
-            System.Threading.Thread.Sleep(6000);
-            progressBar1.Value = 50;
-            System.Threading.Thread.Sleep(7500);
-            progressBar1.Value = 100;
-
+            for (int i = 0; i <= 100; i = i + 10)
+            {
+                System.Threading.Thread.Sleep(1000);
+                progressBar1.Value = i;
+                Application.DoEvents();
+            }
+            
             p.StartInfo.FileName = Application.StartupPath + @"\ps.exe";
             p.StartInfo.Arguments = "-r notepad";
             p.Start();
